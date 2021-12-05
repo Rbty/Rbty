@@ -1,0 +1,20 @@
+local a = script.Parent.KeyBox
+local b = script.Parent.Result
+
+--//
+
+script.Parent.Sub.MouseButton1Click:Connect(function()
+	if a.Text == "YourKey" then
+		b.Visible = true
+		b.Text = "Correct"
+		b.TextColor3 = Color3.fromHSV(0.281417, 1, 0.478431)
+		wait(2)
+		script.Parent.Parent.MainFrame.Visible = false
+	else
+		b.Visible = true
+		b.Text = "Incorrect"
+		b.TextColor3 = Color3.fromHSV(0, 1, 0.776471)
+		wait(2)
+		b.Visible = false
+	end
+end)
